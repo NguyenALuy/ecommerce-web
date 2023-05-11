@@ -1,68 +1,68 @@
 // Conditions checking the registration page
-const username = document.getElementById('username');
+const username = document.querySelector('#username');
 const password = document.getElementById('password');
 const realname = document.getElementById('realname');
 const address = document.getElementById('address');
-const errorName = document.getElementById('username-err');
-const errorPw = document.getElementById('userpassword-err');
-const errorRealName = document.getElementById('realname-err');
-const errorAddress = document.getElementById('address-err');
+const errorName = document.querySelector('.username-err');
+const errorPw = document.querySelector('.userpassword-err');
+const errorChar = document.querySelector('.char-err');
 
-username.addEventListener('input', function (event) {
+
+
+username.addEventListener('input', checkRegexName);
+password.addEventListener('input', checkRegexPassword);
+realname.addEventListener('input', checkRegexChar);
+address.addEventListener('input', checkRegexChar);
+
+function checkErrorName(valid, error){
+    if (valid) {
+        error.style.display = 'none';
+    } else {
+        error.innerHTML = "Please enter the valid name";
+        error.style.display = 'block';
+        error.style.color = "red";
+    }
+}
+function checkRegexName(event) {
     const patternName = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,15}$/;
     const currentValue = event.target.value;
     const valid = patternName.test(currentValue);
+    checkErrorName(valid, errorName);
+};
 
+function checkErrorPassword(valid, error){
     if (valid) {
-        errorName.style.display = 'none';
+        error.style.display = 'none';
     } else {
-        errorName.innerHTML = "Please enter the valid name";
-        errorName.style.display = 'block';
-        errorName.style.color = "red";
+        error.innerHTML = "Please enter the valid password";
+        error.style.display = 'block';
+        error.style.color = "red";
     }
-});
-
-password.addEventListener('input', function (event) {
+}
+function checkRegexPassword (event) {
     const patternName = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
     const currentValue = event.target.value;
     const valid = patternName.test(currentValue);
+    checkErrorPassword(valid, errorPw);
+};
 
+function checkErrorChar(valid, error){
     if (valid) {
-        errorPw.style.display = 'none';
+        error.style.display = 'none';
     } else {
-        errorPw.innerHTML = "Please enter the valid password";
-        errorPw.style.display = 'block';
-        errorPw.style.color = "red";
+        error.innerHTML = "Please enter min 5 characters";
+        error.style.display = 'block';
+        error.style.color = "red";
     }
-});
+}
 
-realname.addEventListener('input', function (event) {
+function checkRegexChar (event) {
     const patternName = /^.{5,}$/;
     const currentValue = event.target.value;
     const valid = patternName.test(currentValue);
+    checkErrorChar(valid, errorChar);
+};
 
-    if (valid) {
-        errorRealName.style.display = 'none';
-    } else {
-        errorRealName.innerHTML = "Please enter min 5 characters";
-        errorRealName.style.display = 'block';
-        errorRealName.style.color = "red";
-    }
-});
-
-address.addEventListener('input', function (event) {
-    const patternName = /^.{5,}$/;
-    const currentValue = event.target.value;
-    const valid = patternName.test(currentValue);
-
-    if (valid) {
-        errorAddress.style.display = 'none';
-    } else {
-        errorAddress.innerHTML = "Please enter min 5 characters";
-        errorAddress.style.display = 'block';
-        errorAddress.style.color = "red";
-    }
-});
 //Check confirmation password
 const confirm_password = document.getElementById('confirm-pass');
 confirm_password.addEventListener('input', validate_password);
