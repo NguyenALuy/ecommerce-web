@@ -25,12 +25,6 @@ width: thin;
   border-radius: 10px;
 } */
 
-
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .wrapper{
   position: relative;
   max-width: 430px;
