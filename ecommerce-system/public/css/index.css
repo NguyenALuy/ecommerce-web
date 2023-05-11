@@ -25,12 +25,6 @@ width: thin;
   border-radius: 10px;
 } */
 
-
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .wrapper{
   position: relative;
   max-width: 430px;
@@ -194,4 +188,91 @@ nav a:hover {
 }
 .search-box button:hover{
   background: #c5c5c5;
+}
+.product-list h1{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 3em;
+  text-transform: uppercase;
+  color: var(--textcolor);
+  text-align: center;
+}
+.products{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.product{
+  position: relative;
+  background-color: var(--sectionback);
+  width: 350px;
+  height: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 20px 40px;
+  border-radius: 10px;
+  transition: .3s;
+}
+.product:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+.image{
+  width:100%;
+  height: 60%;
+}
+.image img{
+  width: 100%;
+}
+.namePrice{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.namePrice h3{
+  font-size: 2em;
+  text-transform: capitalize;
+  color: var(--textcolor);
+}
+.namePrice span{
+  font-size: 1.5em;
+  color: var(--starcolor);
+}
+.product p{
+  font-size: 18px;
+  line-height: 25px;
+}
+.stars svg{
+  font-size: 1.3em;
+  color: var(--starcolor);
+}
+.buy{
+  margin-left: 35px;
+}
+.buy button{
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: none;
+  color: var(--sectionback);
+  font-size: 18px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: .5s;
+}
+.buy button:hover{
+  transform: scale(1.1);
+}
+.view{
+  background-color: #f44b4b;
+}
+.buynow{
+  background-color: #ffab70;
 }
