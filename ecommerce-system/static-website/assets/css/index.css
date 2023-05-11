@@ -117,9 +117,9 @@ form .text h3 a:hover{
   background-color:#4070f4;
 }
 .navigation1 img{
-  padding-left: 10px;
-  padding-top: 10px;
-  width: 120px;
+  margin-left:30px;
+  width: 60px;
+  height: 60px;
 }
 .navigation2 {
   top: 0;
@@ -151,7 +151,7 @@ nav a:hover {
   background-color: #c5c5c5;
   color: black;
   height: 60px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 .search-box{
   top: 0;
@@ -159,7 +159,7 @@ nav a:hover {
   position: absolute;
   width: 800px;
   transform: translate(-50%, -50%);
-  margin-left:700px;
+  margin-left:850px;
 }
 .search-box input{
   position: relative;
