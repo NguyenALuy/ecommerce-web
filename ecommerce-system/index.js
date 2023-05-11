@@ -5,7 +5,7 @@
 // Fill in your code here to build NodeJS + Express + EJS web application
 const express = require('express');
 const app = express();//get the object of express out
-const port=3000;
+const port = 3000;
 app.set('view engine', 'ejs');
 //set up view engine to ejs
 app.use(express.static('public'));
