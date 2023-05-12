@@ -16,6 +16,18 @@ app.get('/', (req, res)=>{
     res.render('login-form');
 })
 
+app.get('/customer-register', (req, res) => {
+    res.render('customer-register');
+});
+
+app.get('/vendor-register', (req, res) => {
+    res.render('vendor-register');
+});
+
+app.get('/shipper-register', (req, res) => {
+    res.render('shipper-register');
+});
+
 app.listen(port, () => {
     console.log(`Listening to the port ${port}`);
 })
