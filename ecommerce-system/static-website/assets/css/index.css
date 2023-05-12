@@ -667,8 +667,8 @@ iframe {
   padding-bottom: 15px;
 }
 .product1 img{
-  width: 25px;
-  height: 25px;
+  width: 75px;
+  height: 75px;
   object-fit: cover;
   border-radius: 5px;
 }
