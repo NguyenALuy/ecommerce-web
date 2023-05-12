@@ -19,3 +19,29 @@ app.get('/', (req, res)=>{
 app.listen(port, () => {
     console.log(`Listening to the port ${port}`);
 })
+
+
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb+srv://caominh:123456789WEB@cluster0.sepuobq.mongodb.net/?retryWrites=true&w=majority')
+.then(() => console.log('Connected to MongoDB Atlas'))
+.catch((error) => console.log(error.message));
+
+
+const customerLogin = new mongoose.Schema({
+  username:{
+    type: number,
+    required: true
+  },
+  password: {
+    type: string, 
+    require: true
+   },
+  addres:{
+      type: string,
+      require: true
+    }
+})
+const customer = mongoose.model('Customer', customerLogin);
