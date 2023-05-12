@@ -1,31 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
-    <script src="https://kit.fontawesome.com/157be64f48.js" crossorigin="anonymous"></script>
-    <title>StepUp</title>
+    <title>Ecommerce Webiste</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <nav class="navigation1">
-        <img src="./assets/images/logo1.png" alt="logo">
-        <div class="search-box">
-            <form>
-              <input type="text" name="" placeholder="Search">
-              <button><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
-            </form>
-          </div>
-        <div class="navigation2">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#"><i class="fa-sharp fa-solid fa-user" style="color: #ffffff;"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a></li>
-                <li><a href="#"></a></li>
-            </ul>
+    <header>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li><a href="index.html"><strong>Homepage</strong></a></li>
+            <li><a href="logincustomer.html"><strong>Login as customers</strong></a></li>
+            <li><a href="loginvendor.html"><strong>Login as vendors</strong></a></li>
+            <li><a href="loginshipper.html"><strong>Login as shippers</strong></a></li>
+            <li><a href="signup.html"><strong>Sign up</strong></a></li>
+        </ul>
+        <img class="logo" type="button" onclick="location.href='index.html'" class="logo" src="logo_web.png" width="100"
+            alt="shoe_store banner">
+        <nav class="navbar">
+            <div class="navbar__container">
+                <div class="navbar__container-item">
+                    <form class="search-box">
+                        <input type="text" name="" placeholder="Search">
+                        <button><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
+                    </form>
+                </div>
+                <a class="navbar__container-item" href="index.html"><strong>Homepage</strong></a>
+                <a class="navbar__container-item" href="logincustomer.html"><strong>Login as customers</strong></a>
+                <a class="navbar__container-item" href="loginvendor.html"></manga><strong>Login as vendors</strong>
+                </a>
+                <a class="navbar__container-item" href="loginshipper.html"><strong>Login as shippers
+                    </strong></a>
+                <a class="navbar__container-item" href="signup.html"><strong>Sign up</strong></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2 class="category-heading">Sneakers</h2>
+        <div class="category">
+            <div class="product">
+                <img src="https://glab.vn/storage/products/2022/07/28/480x320/62e250536dee0.jpg"
+                    alt="Nike Air Force 1 '07 LV8 Paisley Swoosh">
+                <h3>Nike Air Force 1 '07 LV8 Paisley Swoosh</h3>
+                <p>$125</p>
+                <button type="button" onclick="location.href='item1.html'">MORE INFO</button>
+            </div>
+            <div class="product">
+                <img src="https://glab.vn/storage/products/2023/04/24/480x320/64468a2eb4ef5.jpg"
+                    alt="New Balance 2002R Castlerock">
+                <h3>New Balance 2002R Castlerock</h3>
+                <p>45 000VND</p>
+                <button type="button" onclick="location.href='#'">MORE INFO</button>
+            </div>
+            <div class="product">
+                <img src="https://glab.vn/storage/products/2021/03/06/480x320/60433ba13c415.jpg"
+                    alt="Nike Air Force 1 Low 07 LV Sashiko (W)">
+                <h3>Nike Air Force 1 Low 07 LV Sashiko (W)</h3>
+                <p>43 000VND</p>
+                <button>MORE INFO</button>
+            </div>
+            <div class="product">
+                <img src="https://glab.vn/storage/products/2022/10/31/480x320/635fbe3a95459.jpg"
+                    alt="Nike Air Max 1 PRM Dirty Denim">
+                <h3>Nike Air Max 1 PRM Dirty Denim</h3>
+                <p>43000VND</p>
+                <button type="button" onclick="location.href='#'">MORE INFO</button>
+            </div>
         </div>
-    </nav>
+        <div class="see-more">
+            <script src="script.js"></script>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-google-plus"></i></a>
+            </div>
+            <nav class="footer2">
+                <ul>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">Copyright</a></li>
+                    <li><a href="contactus.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footerbottom">
+            <p>Copyright &copy;2023; Desinged by <span class="desinger">Cao Le Hoang Minh</span></p>
+        </div>
+        </nav>
+    </footer>
 </body>
+
 </html>
