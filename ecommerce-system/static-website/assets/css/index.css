@@ -78,7 +78,6 @@ img {
 header {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 0;
@@ -475,6 +474,7 @@ input[type="reset"]:hover {
 }
 
 .logo {
+  position: sticky;
   display: flex;
   margin: 0 auto;
   cursor: pointer;
