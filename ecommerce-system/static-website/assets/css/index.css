@@ -407,7 +407,7 @@ input[type="reset"]:hover {
   margin-top: 5px;
 }
 
-.bookpage_container {
+.product_container {
   display: flex;
   flex-wrap: wrap;
   justify-content: inherit;
@@ -416,7 +416,7 @@ input[type="reset"]:hover {
   padding-right: 70px;
 }
 
-.bookpage_item {
+.product_item {
   width: calc(33.3%-40px);
   margin-bottom: 40px;
 }
@@ -434,24 +434,24 @@ input[type="reset"]:hover {
   height: auto;
 }
 
-.book_info {
+.product_info {
   display: flex;
   flex: 1;
   align-items: center;
   flex-direction: column;
 }
 
-.book_name {
+.product_name {
   color: red;
   padding: 0px;
 }
 
-#book_price {
+.product_price {
   color: red;
   margin: 0 auto
 }
 
-.book_description {
+.product_description {
   margin: 0px 70px;
 }
 

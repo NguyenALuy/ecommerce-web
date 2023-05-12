@@ -22,7 +22,6 @@ app.listen(port, () => {
 
 
 const express = require('express');
-const app = express();
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb+srv://caominh:123456789WEB@cluster0.sepuobq.mongodb.net/?retryWrites=true&w=majority')
@@ -39,9 +38,13 @@ const customerLogin = new mongoose.Schema({
     type: string, 
     require: true
    },
-  addres:{
+  address:{
       type: string,
       require: true
-    }
+    },
+    fullname:{
+        type:string,
+        require: true
+    },
 })
 const customer = mongoose.model('Customer', customerLogin);
