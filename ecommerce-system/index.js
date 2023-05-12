@@ -42,7 +42,7 @@ const customerLogin = new mongoose.Schema({
       type: string,
       require: true
     },
-    fullname:{
+fullname:{
         type:string,
         require: true
     },
