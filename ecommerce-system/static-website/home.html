@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="assets/js/search.js"></script>
 </head>
 
 <body>
@@ -20,29 +21,63 @@
         </label>
         <ul class="menu">
             <li><a href="index.html"><strong>Homepage</strong></a></li>
-            <li><a href="logincustomer.html"><strong>Login as customers</strong></a></li>
-            <li><a href="loginvendor.html"><strong>Login as vendors</strong></a></li>
-            <li><a href="loginshipper.html"><strong>Login as shippers</strong></a></li>
+            <li><a href="login-form.html"><strong>Login</strong></a></li>
             <li><a href="signup.html"><strong>Sign up</strong></a></li>
         </ul>
-        <img class="logo" type="button" onclick="location.href='index.html'" class="logo" src="logo_web.png" width="100"
-            alt="shoe_store banner">
+        <img class="logo" type="button" onclick="location.href='index.html'" class="logo"
+            src="../public/images/logo.png" width="100" alt="shoe_store banner">
         <nav class="navbar">
             <div class="navbar__container">
                 <div class="navbar__container-item">
                     <form class="search-box">
-                        <input type="text" name="" placeholder="Search">
+                        <input type="text" id="search-item" name="" placeholder="Search" onkeyup="search()">
                         <button><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
                     </form>
                 </div>
                 <a class="navbar__container-item" href="index.html"><strong>Homepage</strong></a>
-                <a class="navbar__container-item" href="logincustomer.html"><strong>Login as customers</strong></a>
-                <a class="navbar__container-item" href="loginvendor.html"></manga><strong>Login as vendors</strong>
-                </a>
-                <a class="navbar__container-item" href="loginshipper.html"><strong>Login as shippers
-                    </strong></a>
+                <a class="navbar__container-item" href="login-form.html"><strong>Login</strong></a>
                 <a class="navbar__container-item" href="signup.html"><strong>Sign up</strong></a>
             </div>
+            <!--------------------------------Search Engine start------------------------------->
+            <div class="product-list" id="product-list" style="display: none;">
+                <a href="#">
+                    <div class="product1">
+                        <img src="https://glab.vn/storage/products/2022/07/28/480x320/62e250536dee0.jpg" alt="">
+                        <div class="p-details">
+                            <h2>Nike Air Force 1 '07 LV8 Paisley Swoosh</h2>
+                            <h3>$125</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="product1">
+                        <img src="https://glab.vn/storage/products/2023/04/24/480x320/64468a2eb4ef5.jpg" alt="">
+                        <div class="p-details">
+                            <h2>New Balance 2002R Castlerock</h2>
+                            <h3>$200</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="product1">
+                        <img src="https://glab.vn/storage/products/2021/03/06/480x320/60433ba13c415.jpg" alt="">
+                        <div class="p-details">
+                            <h2>Nike Air Force 1 Low 07 LV Sashiko (W)</h2>
+                            <h3>$327</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="product1">
+                        <img src="https://glab.vn/storage/products/2022/10/31/480x320/635fbe3a95459.jpg" alt="">
+                        <div class="p-details">
+                            <h2>Nike Air Max 1 PRM Dirty Denim</h2>
+                            <h3>$100</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!--------------------------------Search Engine end------------------------------->
         </nav>
     </header>
     <main>
@@ -59,21 +94,21 @@
                 <img src="https://glab.vn/storage/products/2023/04/24/480x320/64468a2eb4ef5.jpg"
                     alt="New Balance 2002R Castlerock">
                 <h3>New Balance 2002R Castlerock</h3>
-                <p>45 000VND</p>
+                <p>$200</p>
                 <button type="button" onclick="location.href='#'">MORE INFO</button>
             </div>
             <div class="product">
                 <img src="https://glab.vn/storage/products/2021/03/06/480x320/60433ba13c415.jpg"
                     alt="Nike Air Force 1 Low 07 LV Sashiko (W)">
                 <h3>Nike Air Force 1 Low 07 LV Sashiko (W)</h3>
-                <p>43 000VND</p>
+                <p>$327</p>
                 <button>MORE INFO</button>
             </div>
             <div class="product">
                 <img src="https://glab.vn/storage/products/2022/10/31/480x320/635fbe3a95459.jpg"
                     alt="Nike Air Max 1 PRM Dirty Denim">
                 <h3>Nike Air Max 1 PRM Dirty Denim</h3>
-                <p>43000VND</p>
+                <p>$100</p>
                 <button type="button" onclick="location.href='#'">MORE INFO</button>
             </div>
         </div>

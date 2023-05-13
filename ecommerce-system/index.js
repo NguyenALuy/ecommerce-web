@@ -31,3 +31,49 @@ app.get('/shipper-register', (req, res) => {
 app.listen(port, () => {
     console.log(`Listening to the port ${port}`);
 })
+
+
+const express = require('express');
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb+srv://caominh:123456789WEB@cluster0.sepuobq.mongodb.net/?retryWrites=true&w=majority')
+.then(() => console.log('Connected to MongoDB Atlas'))
+.catch((error) => console.log(error.message));
+
+
+const customerLogin = new mongoose.Schema({
+  username:{
+    type: number,
+    required: true
+  },
+  password: {
+    type: string, 
+    require: true
+   },
+  address:{
+      type: string,
+      require: true
+    },
+fullname:{
+        type:string,
+        require: true
+    },
+})
+const customer = mongoose.model('Customer', customerLogin);
+
+
+const productDetail = new mongoose.Schema({
+  product_name:{
+    type: number,
+    required: true
+  },
+  price: {
+    type: float, 
+    require: true
+   },
+  product_description:{
+      type: string,
+      require: true
+    },
+})
+const product = mongoose.model('Product', productDetail);
