@@ -48,3 +48,20 @@ fullname:{
     },
 })
 const customer = mongoose.model('Customer', customerLogin);
+
+
+const productDetail = new mongoose.Schema({
+  product_name:{
+    type: number,
+    required: true
+  },
+  price: {
+    type: float, 
+    require: true
+   },
+  product_description:{
+      type: string,
+      require: true
+    },
+})
+const product = mongoose.model('Product', productDetail);
