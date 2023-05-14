@@ -45,7 +45,7 @@ app.post('/customer-register', (req, res) => {
   const password = req.body.password;
 
   const newCustomer = new customer({
-    email: email,
+    username: username,
     password: password
   })
   newCustomer.save((err)=>{
@@ -61,7 +61,7 @@ app.post('/vendor-register', (req, res) => {
   const password = req.body.password;
 
   const newVendor = new vendor({
-    email: email,
+    username: username,
     password: password
   })
   newVendor.save((err)=>{
@@ -77,7 +77,7 @@ app.post('/shipper-register', (req, res) => {
   const password = req.body.password;
 
   const newShipper = new shipper({
-    email: email,
+    username: username,
     password: password
   })
   newShipper.save((err)=>{
