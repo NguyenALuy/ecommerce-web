@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res)=>{
-    res.render('login-form');
+    res.render('login');
 })
 
 app.post('/', (req, res)=>{
