@@ -45,7 +45,7 @@ app.post('/customer-register', (req, res) => {
   const password = req.body.password;
 
   const newCustomer = new customer({
-    email: email,
+    username: username,
     password: password
   })
   newCustomer.save((err)=>{
@@ -61,7 +61,7 @@ app.post('/vendor-register', (req, res) => {
   const password = req.body.password;
 
   const newVendor = new vendor({
-    email: email,
+    username: username,
     password: password
   })
   newVendor.save((err)=>{
@@ -77,7 +77,7 @@ app.post('/shipper-register', (req, res) => {
   const password = req.body.password;
 
   const newShipper = new shipper({
-    email: email,
+    username: username,
     password: password
   })
   newShipper.save((err)=>{
@@ -105,9 +105,11 @@ const customerSchema = new mongoose.Schema({
     require: true,
      minlength: 8
    },
+   realname: {
+    type:String
+   },
   address:{
-      type: String,
-      require: true
+      type: String
     },
 })
 const customer = mongoose.model('Customer', customerSchema);
@@ -123,9 +125,11 @@ const vendorSchema = new mongoose.Schema({
     require: true,
      minlength: 8
    },
+   realname: {
+    type:String
+   },
   address:{
-      type: String,
-      require: true
+      type: String
     },
 })
 const vendor = mongoose.model('Vendor', vendorSchema);
@@ -141,10 +145,6 @@ const shipperSchema = new mongoose.Schema({
     require: true,
      minlength: 8
    },
-  address:{
-      type: String,
-      require: true
-    },
 })
 const shipper = mongoose.model('Shipper', shipperSchema);
 module.exports=shipper;
@@ -168,8 +168,7 @@ const productSchema = new mongoose.Schema({
     require: true
    },
   product_description:{
-      type: String,
-      require: true
+      type: String
     },
 })
 const product = mongoose.model('Product', productSchema);
