@@ -33,7 +33,7 @@ app.listen(port, () => {
 })
 
 
-const express = require('express');
+
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb+srv://caominh:123456789WEB@cluster0.sepuobq.mongodb.net/?retryWrites=true&w=majority')
@@ -43,19 +43,20 @@ mongoose.connect('mongodb+srv://caominh:123456789WEB@cluster0.sepuobq.mongodb.ne
 
 const customerLogin = new mongoose.Schema({
   username:{
-    type: number,
+    type: String,
     required: true
   },
   password: {
-    type: string, 
-    require: true
+    type: String, 
+    require: true,
+     minlength: 8
    },
   address:{
-      type: string,
+      type: String,
       require: true
     },
 fullname:{
-        type:string,
+        type: String,
         require: true
     },
 })
@@ -64,15 +65,15 @@ const customer = mongoose.model('Customer', customerLogin);
 
 const productDetail = new mongoose.Schema({
   product_name:{
-    type: number,
+    type: Number,
     required: true
   },
   price: {
-    type: float, 
+    type: Number, 
     require: true
    },
   product_description:{
-      type: string,
+      type: String,
       require: true
     },
 })
