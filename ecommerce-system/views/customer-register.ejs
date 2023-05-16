@@ -5,20 +5,20 @@
       <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
       <div class="form-floating">
-        <input type="text" class="form-control" name="username" placeholder="name@example.com">
+        <input type="text" class="form-control" name="username" placeholder="name@example.com" minlength="5" required>
         <label for="floatingInput">Username</label>
       </div>
       <div class="form-floating">
         <input type="password" class="form-control" name="password" placeholder="Password"
-          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,20}$">
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,20}$" required>
         <label for="floatingPassword">Password</label>
       </div>
       <div class="form-floating">
-        <input type="text" class="form-control" name="realname" placeholder="Enter Your Name">
+        <input type="text" class="form-control" name="realname" placeholder="Enter Your Name" minlength="5" required>
         <label for="floatingPassword">Real Name</label>
       </div>
       <div class="form-floating">
-        <input type="text" class="form-control" name="address" placeholder="Enter Your Address">
+        <input type="text" class="form-control" name="address" placeholder="Enter Your Address" minlength="5" required>
         <label for="floatingPassword">Address</label>
       </div>
       <div class="form-floating">
